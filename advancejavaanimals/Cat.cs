@@ -13,7 +13,14 @@ namespace advancejavaanimals.Models
 			this._mousesKilled = mousesKilled;
 		}
 
+		public Cat(string name) : base(name) { }
+
 		public int MousesKilled => _mousesKilled;
+
+		public void SetMousesKilled(int mousesKilled)
+		{
+			_mousesKilled = mousesKilled;
+		}
 
 		public void AddMouse()
 		{

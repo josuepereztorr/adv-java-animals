@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using advancejavaanimals;
 using advancejavaanimals.Interfaces;
 using advancejavaanimals.Models;
 using advancejavaanimals.Services;
@@ -10,10 +11,10 @@ FileInputService inputFileService = new FileInputService(path);
 
 List<ITalkable> zoo = new List<ITalkable>();
 
+AnimalBuilder animalBuilder = new AnimalBuilder(zoo);
+
 // Lines to Replace Begin Here
-zoo.Add(new Dog(true, "Bean"));
-zoo.Add(new Cat(9, "Charlie"));
-zoo.Add(new Teacher(44, "Stacy Read"));
+animalBuilder.CreateAnimalFromPrompt();
 // End Lines to Replace
 
 zoo.ForEach((ITalkable thing) => PrintOut(thing));

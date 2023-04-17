@@ -13,9 +13,16 @@ namespace advancejavaanimals.Models
 			this._friendly = friendly;
 		}
 
+        public Dog(string name) : base(name) { }
+
 		public bool IsFriendly()
         {
             return _friendly;
+        }
+
+        public void SetFriendly(bool friendly)
+        {
+            this._friendly = friendly;
         }
 
         public string Talk()
